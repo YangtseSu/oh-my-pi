@@ -22,7 +22,7 @@ retry:
 
 An explicit empty chain keeps each workload local. Leaving a model-kind chain unset instead uses that role's built-in priority list. The `default` fallback chain does not apply to `speech`, `dictation`, or `judge`.
 
-Inspect the catalog with `omp models --kind tiny`, `omp models --kind tts`, and `omp models --kind stt`. Download tiny models with `omp tiny-models list`, `omp tiny-models download <model-id>`, or `omp tiny-models download all`. Run `omp setup speech` to choose, persist, and download the local speech and dictation models selected by their roles.
+Inspect the catalog with `omp models --kind tiny`, `omp models --kind tts`, and `omp models --kind stt`. Download tiny models with `omp tiny-models list`, `omp tiny-models download <model-id>`, or `omp tiny-models download all`. Run `omp setup speech` to choose, persist, and download the local speech and dictation models selected by their roles. The picker writes `modelRoles.speech` / `modelRoles.dictation` for you; manually editing those roles is only needed for scripted, non-interactive setup.
 
 The tiny-model CLI and source registry retain **title** and **memory** groupings because those are the workloads used to benchmark and recommend model sizes. They are not runtime model classes: every entry in both groups has catalog kind `tiny`, and any compatible entry can be assigned to `tiny`, `memory`, or `judge`. Choose based on quality and resource needs rather than the CLI grouping alone.
 
