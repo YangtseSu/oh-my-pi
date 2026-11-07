@@ -2,6 +2,10 @@
 
 ## [Unreleased]
 
+### Added
+
+- Added `local/kokoro-zh` (sherpa-onnx Kokoro-82M v1.1-zh) and `local/x-asr-960ms-zh-en` (streaming Chinese/English X-ASR) seed rows.
+
 ### Fixed
 
 - Corrected Devin SWE-2 Flash and SWE-2 Fast token pricing, and SWE-2's promotional rates and end time ([#18332](https://github.com/can1357/oh-my-pi/pull/18332) by [@eggpeat](https://github.com/eggpeat))

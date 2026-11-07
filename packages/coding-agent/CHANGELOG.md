@@ -13,6 +13,7 @@
 
 ### Added
 
+- Added `local/kokoro-zh`, a sherpa-onnx Kokoro-82M v1.1-zh local TTS model with Chinese/English voices, and `local/x-asr-960ms-zh-en`, a streaming Chinese/English X-ASR dictation tier. Both download into the shared tiny-model cache through `omp setup speech` and work through the existing `speech` and `dictation` roles (by [@YangtseSu](https://github.com/YangtseSu)).
 - RPC `bash` accepts `excludeFromContext: true` to keep a run out of model context like terminal `!!`; runtimes advertise support with `supportsBashExcludeFromContext` in the `ready` frame, and the Python SDK exposes that frame as `client.ready` ([#18206](https://github.com/can1357/oh-my-pi/pull/18206) by [@andrebrait](https://github.com/andrebrait))
 
 ### Fixed
