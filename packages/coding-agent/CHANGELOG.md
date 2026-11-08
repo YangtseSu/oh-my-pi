@@ -18,6 +18,7 @@
 
 ### Fixed
 
+- Speech vocalization now uses the model selected by the `speech` role instead of always loading the default English Kokoro model; the event controller wires the session settings and registry into the vocalizer.
 - A `%%bash` cell in Python eval no longer prints its exit status (a stray `0`) after the command's output; a failing cell reports `%%bash: exit status N` on stderr instead.
 - Reusing an already running `omp stats` dashboard now exits successfully without stopping the existing server ([#18443](https://github.com/can1357/oh-my-pi/issues/18443)).
 - A function defined inside a command substitution in a here-document body (`cat <<E` / `$(f() { …; }; f)` / `E`) no longer crashes the built-in shell.
